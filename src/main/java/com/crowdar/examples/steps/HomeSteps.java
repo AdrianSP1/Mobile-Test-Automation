@@ -53,10 +53,23 @@ public class HomeSteps extends PageSteps {
         MobileActionManager.click(HomeConstants.SAVE_HOURS);
     }
 
-    @Then("Se muestra el escenario creado en la pantalla principal")
+    @Then("Se muestra el escenario y luego se borra la entrada")
     public void seMuestraElEscenarioCreadoEnLaPantallaPrincipal() {
         HomeValidator.verificarEscenarioCreado();
 
     }
+
+    @And("el usuario ingresa la fecha de inicio {string}")
+    public void elUsuarioIngresaLaFechDeInicio(String fecha_I) {
+        HomeService.inputFechaInicio(fecha_I);
+
+    }
+
+    @And("el usuario ingresa la fecha de salida {string}")
+    public void elUsuarioIngresaLaFechaDeSalida(String fecha_S) {
+        HomeService.inputFechaSalida(fecha_S);
+    }
+
+
 }
 

@@ -41,6 +41,12 @@ public class HomeService {
     }
 
 
-
+    public static void inputFechaInicio(String fecha_I) {
+        MobileActionManager.click(HomeConstants.INPUT_FECHA_INICIAL, fecha_I);
     }
+
+    public static void inputFechaSalida(String fecha_S) {
+        MobileActionManager.click(HomeConstants.INPUT_FECHA_SALIDA, fecha_S);
+    }
+}
 
