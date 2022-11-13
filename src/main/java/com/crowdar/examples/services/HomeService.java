@@ -48,5 +48,11 @@ public class HomeService {
     public static void inputFechaSalida(String fecha_S) {
         MobileActionManager.click(HomeConstants.INPUT_FECHA_SALIDA, fecha_S);
     }
+
+    public static void cancelEscenario() {
+        MobileActionManager.click(HomeConstants.CANCEL_ENTRY);
+        MobileActionManager.click(HomeConstants.CANCEL_ENTRY_CONFIRM);
+
+    }
 }
 

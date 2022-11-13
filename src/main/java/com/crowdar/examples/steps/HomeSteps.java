@@ -13,7 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class HomeSteps extends PageSteps {
-    @Given("el usuario esta logeado")
+    @Given("El usuario esta logeado")
     public void elUsuarioEstaLogeado(){
         LoginService.doLogin(PropertyManager.getProperty("email"), PropertyManager.getProperty("password"));
     }
@@ -28,27 +28,27 @@ public class HomeSteps extends PageSteps {
         HomeService.clickMenuFechas();
     }
 
-    @And("el usuario ingresa el inicio (.*) del trabajo")
+    @And("El usuario ingresa el inicio (.*) del trabajo")
     public void elUsuarioIngresaLaHoraDeInicioDelTrabajo(String horaDeInicio) {
         HomeService.inputHoraInicio(horaDeInicio);
     }
 
-    @And("el usuario hace click en el boton End")
+    @And("El usuario hace click en el boton End")
     public void elUsuarioHaceClickEnElBotonEnd() {
         HomeService.clickHoraFin();
     }
 
-    @And("el usuario ingresa el fin (.*) del trabajo")
+    @And("El usuario ingresa el fin (.*) del trabajo")
     public void elUsuarioIngresaLaHoraDeFinDelTrabajo(String horaDeFin) {
         HomeService.inputHoraFin(horaDeFin);
     }
 
-    @And("el usuario guarda el escenario con las horas cargadas")
+    @And("El usuario guarda el escenario con las horas cargadas")
     public void elUsuarioGuardaElEscenarioConLasHorasCargadas() {
         MobileActionManager.click(HomeConstants.SAVE_END);
     }
 
-    @And("el usuario crea el escernario")
+    @And("El usuario crea el escernario")
     public void elUsuarioCreaElEscernario() {
         MobileActionManager.click(HomeConstants.SAVE_HOURS);
     }
@@ -59,17 +59,32 @@ public class HomeSteps extends PageSteps {
 
     }
 
-    @And("el usuario ingresa la fecha de inicio {string}")
+    @And("El usuario ingresa la fecha de inicio {string}")
     public void elUsuarioIngresaLaFechDeInicio(String fecha_I) {
         HomeService.inputFechaInicio(fecha_I);
 
     }
 
-    @And("el usuario ingresa la fecha de salida {string}")
+    @And("El usuario ingresa la fecha de salida {string}")
     public void elUsuarioIngresaLaFechaDeSalida(String fecha_S) {
         HomeService.inputFechaSalida(fecha_S);
     }
 
 
+    @Then("Se muestra el escenario con fecha")
+    public void seMuestraElEscenarioConFecha() {
+        HomeValidator.verificarEntradaDatos();
+    }
+
+    @And("El usuario cancela el escenario")
+    public void elUsuarioCancelaElEscenario() {
+        HomeService.cancelEscenario();
+
+    }
+
+    @Then("No se crea el escenario")
+    public void noSeCreaElEscenario() {
+        HomeValidator.verificarEscenarioCancel();
+    }
 }
 

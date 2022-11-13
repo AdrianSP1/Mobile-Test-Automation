@@ -19,4 +19,7 @@ public class HomeConstants {
     public static final String ENTRY_CREATE ="xpath:/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.TextView[3]";
     public static final String INPUT_FECHA_INICIAL= "xpath://android.view.View[@content-desc='%s']";
     public static final String INPUT_FECHA_SALIDA = "xpath://android.view.View[@content-desc='%s']";
+    public static final String CANCEL_ENTRY ="xpath://android.widget.ImageButton[@content-desc='Navigate up']"; ;
+    public static final String CANCEL_ENTRY_CONFIRM ="xpath:/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.TextView[3]"; ;
+    public static final String NO_TIMES_ENTRY ="id:textView7"; ;
 }
