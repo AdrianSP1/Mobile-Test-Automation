@@ -3,14 +3,17 @@ package com.crowdar.examples.steps;
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.HomeConstants;
+import src.main.java.com.crowdar.examples.constants.HomeConstants;
 import com.crowdar.examples.services.HomeService;
 import com.crowdar.examples.services.LoginService;
 import com.crowdar.examples.validates.HomeValidator;
+
+import com.crowdar.examples.validates.LoginValidate;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 
 public class HomeSteps extends PageSteps {
     @Given("El usuario esta logeado")
@@ -56,6 +59,10 @@ public class HomeSteps extends PageSteps {
     @Then("Se muestra el escenario y luego se borra la entrada")
     public void seMuestraElEscenarioCreadoEnLaPantallaPrincipal() {
         HomeValidator.verificarEscenarioCreado();
+        HomeService.deleteEntry();
+        HomeValidator.verificarInicioSinEntradas();
+
+
 
     }
 
@@ -71,9 +78,11 @@ public class HomeSteps extends PageSteps {
     }
 
 
-    @Then("Se muestra el escenario con fecha")
+    @Then("Se muestra el escenario con fecha y luego se borra la entrada")
     public void seMuestraElEscenarioConFecha() {
         HomeValidator.verificarEntradaDatos();
+        HomeService.deleteEntry();
+        HomeValidator.verificarInicioSinEntradas();
     }
 
     @And("El usuario cancela el escenario")
@@ -84,7 +93,28 @@ public class HomeSteps extends PageSteps {
 
     @Then("No se crea el escenario")
     public void noSeCreaElEscenario() {
-        HomeValidator.verificarEscenarioCancel();
+        HomeValidator.verificarInicioSinEntradas();
+
+    }
+
+    @And("El usuario hace click en el menu")
+    public void elUsuarioHaceClickEnElMenu() {
+        HomeService.clickMenu();
+    }
+
+    @And("El usuario hace click en Logout")
+    public void elUsuarioHaceClickEnLogout() {
+        HomeService.cerrarSesion();
+    }
+
+    @And("El usuario confirma el cierre de sesion")
+    public void elUsuarioConfirmaElCierreDeSesion() {
+        HomeService.confirmCerrarSesion();
+    }
+
+    @Then("El usuario cierra sesion de su cuenta")
+    public void elUsuarioCierraSesionDeSuCuenta() {
+        LoginValidate.isViewLoaded();
     }
 }
 

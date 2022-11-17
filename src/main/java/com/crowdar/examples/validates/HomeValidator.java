@@ -1,10 +1,9 @@
 package com.crowdar.examples.validates;
 
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.HomeConstants;
+import src.main.java.com.crowdar.examples.constants.HomeConstants;
 import org.testng.asserts.SoftAssert;
 
-import static jdk.internal.agent.Agent.getText;
 
 public class HomeValidator {
     static SoftAssert softAssert= new SoftAssert();
@@ -17,7 +16,7 @@ public class HomeValidator {
         softAssert.assertEquals(Day, "Wed., 09 Nov. ", "No se creo la entrada con fecha");
     }
 
-    public static void verificarEscenarioCancel() {
+    public static void verificarInicioSinEntradas() {
         softAssert.assertSame("No time entries yet", MobileActionManager.getText(HomeConstants.NO_TIMES_ENTRY));
 
     }

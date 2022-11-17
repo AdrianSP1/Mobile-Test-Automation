@@ -1,7 +1,7 @@
 package com.crowdar.examples.services;
 
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.LoginConstants;
+import src.main.java.com.crowdar.examples.constants.LoginConstants;
 
 /**
  * This class contains the business logic.

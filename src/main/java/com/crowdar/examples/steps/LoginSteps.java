@@ -2,7 +2,6 @@ package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.LoginConstants;
 import com.crowdar.examples.services.LoginService;
 import com.crowdar.examples.validates.LoginValidate;
 import cucumber.api.java.en.When;

@@ -1,7 +1,7 @@
 package com.crowdar.examples.validates;
 
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.LoginConstants;
+import src.main.java.com.crowdar.examples.constants.LoginConstants;
 import org.testng.asserts.SoftAssert;
 import static com.crowdar.core.actions.ActionManager.isVisible;
 

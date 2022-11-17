@@ -1,10 +1,18 @@
 package com.crowdar.examples.services;
 
+
 import com.crowdar.core.actions.MobileActionManager;
 
-import com.crowdar.examples.constants.HomeConstants;
+import src.main.java.com.crowdar.examples.constants.HomeConstants;
 
+import com.crowdar.examples.constants.SettingsConstants;
+import org.joda.time.Months;
 import org.openqa.selenium.WebElement;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import  org.joda.time.*;
 
 
 public class HomeService {
@@ -31,6 +39,7 @@ public class HomeService {
     }
 
 
+
     public static void inputHoraFin(String E_Hora ){
         WebElement element= MobileActionManager.getElement(HomeConstants.HOUR_END_ENTRY);
         while(!element.getText().equals(E_Hora)){
@@ -43,16 +52,36 @@ public class HomeService {
 
     public static void inputFechaInicio(String fecha_I) {
         MobileActionManager.click(HomeConstants.INPUT_FECHA_INICIAL, fecha_I);
-    }
+        }
+
+
+
 
     public static void inputFechaSalida(String fecha_S) {
         MobileActionManager.click(HomeConstants.INPUT_FECHA_SALIDA, fecha_S);
-    }
+        }
+
 
     public static void cancelEscenario() {
         MobileActionManager.click(HomeConstants.CANCEL_ENTRY);
         MobileActionManager.click(HomeConstants.CANCEL_ENTRY_CONFIRM);
 
     }
+    public static void clickMenu(){
+        MobileActionManager.click(SettingsConstants.MENU);
+    }
+    public static void cerrarSesion(){
+        MobileActionManager.click(SettingsConstants.LOGOUT);
+
+    }
+    public static void confirmCerrarSesion(){
+        MobileActionManager.click(SettingsConstants.LOGOUT_CONFIRM);
+    }
+
+    public static void deleteEntry(){
+        MobileActionManager.click(HomeConstants.MORE_TIME_ENTRY);
+        MobileActionManager.click(HomeConstants.DELETE_ENTRY);
+    }
+
 }
 

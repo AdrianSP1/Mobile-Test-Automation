@@ -1,4 +1,4 @@
-package com.crowdar.examples.constants;
+package src.main.java.com.crowdar.examples.constants;
 
 public class LoginConstants {
 

@@ -1,4 +1,4 @@
-Feature: Se crea un escenario
+Feature: El usuario  prueba las variantes de crear un escenario.
 Background:
   Given El usuario esta logeado
 
@@ -42,7 +42,7 @@ Background:
       And El usuario ingresa el fin <horaDeFin> del trabajo
       And El usuario guarda el escenario con las horas cargadas
       And El usuario crea el escernario
-      Then Se muestra el escenario con fecha
+      Then Se muestra el escenario con fecha y luego se borra la entrada
       Examples:
       |    horaDeInicio       |horaDeFin|        fechaEntrada       |        fechaSalida        |
       |             21              |       03      | 08 November 2022   |  09 November 2022  |
