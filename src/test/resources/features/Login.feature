@@ -1,5 +1,5 @@
 Feature: El usuario se loguea en la aplicacion clockify de manera exitosa
-@Login
+@Mobile @Login
   Scenario Outline:Logeo exitoso
     Given El usuario accede a la aplicacion correctamente
     When  El usuario ingresa su: <email>, y su <password>
@@ -10,7 +10,7 @@ Feature: El usuario se loguea en la aplicacion clockify de manera exitosa
    |               email                     |     password     |
    |pepelopez125q@gmail.com| Pepelopez789  |
 
-  @Logout
+  @Mobile @Logout
  Scenario Outline: : El usuario cierra sesion de  su cuenta
     Given El usuario accede a la aplicacion correctamente
     When  El usuario ingresa su: <email>, y su <password>

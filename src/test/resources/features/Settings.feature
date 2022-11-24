@@ -1,6 +1,6 @@
 Feature: El usuario prueba el menu del Home
 
-    @darkMode
+    @Mobile @darkMode
   Scenario: El usuario activa el modo oscuro
     Given El usuario esta logeado
     And El usuario hace click en el menu

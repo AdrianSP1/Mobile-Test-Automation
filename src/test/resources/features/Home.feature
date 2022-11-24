@@ -2,7 +2,7 @@ Feature: El usuario  prueba las variantes de crear un escenario.
 Background:
   Given El usuario esta logeado
 
-  @EscenarioCancelado
+  @Mobile @EscenarioCancelado
   Scenario Outline:El usuario cancela el preceso de crear un escenario
     When El usuario hace click en el boton +
     And El usuario hace click en el boton de entrada de fecha
@@ -17,7 +17,7 @@ Background:
       | horaDeInicio | horaDeFin  |
       |        18         |       20        |
 
-  @Home
+  @Mobile @Home
   Scenario Outline: El usuario crea un escenario
     When El usuario hace click en el boton +
     And  El usuario hace click en el boton de entrada de fecha
@@ -31,7 +31,7 @@ Background:
     |horaDeInicio||horaDeFin|
     |        12      ||      17       |
 
-    @EscenarioConFecha
+    @Mobile @EscenarioConFecha
     Scenario Outline: El usuario crea un escenario cargando fecha y horas.
       When El usuario hace click en el boton +
       And  El usuario hace click en el boton de entrada de fecha
