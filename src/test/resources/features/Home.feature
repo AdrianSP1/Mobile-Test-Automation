@@ -45,6 +45,6 @@ Background:
       Then Se muestra el escenario con fecha y luego se borra la entrada
       Examples:
       |    horaDeInicio       |horaDeFin|        fechaEntrada       |        fechaSalida        |
-      |             21              |       03      | 08 November 2022   |  09 November 2022  |
+      |             21              |       03      | 08 December 2022   |  09 December 2022  |
 
 
